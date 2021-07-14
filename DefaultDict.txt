@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
+d = defaultdict(list)
+list2 = []
+m,n = map(int,input().split())
+for i in range(m):
+    a=input()
+    d[a].append(i+1)
+for i in range(n):
+    b=input()
+    list2 = list2+[b]
+for i in list2:
+    if i in d:
+        print(" ".join(map(str, d[i])))
+    else:
+        print(-1)
